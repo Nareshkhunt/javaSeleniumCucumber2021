@@ -17,10 +17,10 @@ public class Hooks {
         //to run with Selenium Grid
        // driverManager.runOnRemoteHost();
         driverManager.navigateToHomePage(url);
-        driverManager.maxBrowser();
+//         driverManager.maxBrowser();
         driverManager.waitForPageLoad();
         driverManager.applyiImplicitWait();
-        driverManager.handleCookies();
+//         driverManager.handleCookies();
     }
 
     @After
