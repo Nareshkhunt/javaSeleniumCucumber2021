@@ -18,6 +18,7 @@ public class SearchSteps {
     public void i_am_on_the_home_page() throws Throwable {
      String acualUrl   =homePage.getPresentUrl();
      assertThat(acualUrl, is(endsWith("co.uk/")));
+     System.out.println("i am home page");
 
     }
 
