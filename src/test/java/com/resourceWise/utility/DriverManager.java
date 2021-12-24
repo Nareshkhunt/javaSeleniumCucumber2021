@@ -40,6 +40,7 @@ public DriverManager(){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
+                options.add_argument('--headless');
                 options.addArguments("start-maximized"); // open Browser in maximized mode
                 options.addArguments("disable-infobars"); // disabling infobars
                 options.addArguments("--disable-extensions"); // disabling extensions
