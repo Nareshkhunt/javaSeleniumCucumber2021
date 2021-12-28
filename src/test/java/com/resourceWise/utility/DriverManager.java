@@ -27,7 +27,7 @@ public class DriverManager {
 
     public static WebDriver driver;
 //    private String browser=System.getProperty("instance");
-    private String browser="firefox";
+    private String browser="chrome";
 
 
 public DriverManager(){
