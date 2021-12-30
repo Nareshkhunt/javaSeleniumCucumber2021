@@ -1,4 +1,4 @@
-@nk
+@smoke
 Feature: Basket-user story for basket functionality
   As an end user
   I want to add a product to basket
@@ -8,5 +8,5 @@ Feature: Basket-user story for basket functionality
     Given I am on the home page
     When I search for a product "nike"
     And I select any product
-    And I add the product to the basket
-    Then the product should be in the basket
+#    And I add the product to the basket
+#    Then the product should be in the basket

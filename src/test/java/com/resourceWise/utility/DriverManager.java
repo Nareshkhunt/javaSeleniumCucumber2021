@@ -39,16 +39,16 @@ public DriverManager(){
         switch (browser){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
-                options.setHeadless(true);
+//                ChromeOptions options = new ChromeOptions();
+//                options.setHeadless(true);
 //                 options.addArguments("start-maximized"); // open Browser in maximized mode
 //                 options.addArguments("disable-infobars"); // disabling infobars
 //                 options.addArguments("--disable-extensions"); // disabling extensions
 //                 options.addArguments("--disable-gpu"); // applicable to windows os only
 //                 options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 //                 options.addArguments("--no-sandbox"); // Bypass OS security model
-                driver = new ChromeDriver(options);
-//                 driver=new ChromeDriver();
+//                driver = new ChromeDriver(options);
+                driver=new ChromeDriver();
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -93,11 +93,15 @@ public DriverManager(){
     driver.quit();
     }
     public void waitForPageLoad(){
+
     driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
     }
+
     public void applyiImplicitWait(){
+
     driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
     }
+
     public void sleepBrowser(int ms){
         try {
             Thread.sleep(ms);
@@ -110,13 +114,16 @@ public DriverManager(){
         WebDriverWait webDriverWait=new WebDriverWait(driver,30);
     return  webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
     public WebElement waitUntilElementVisible(By by){
         WebDriverWait webDriverWait=new WebDriverWait(driver,30);
         return  webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
+
     public Boolean waitUntilElementInvisible(By by){
         return new WebDriverWait(driver,15).until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
+
     public void takeScreenShot(Scenario scenario) {
         byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenShot, "image/png");
