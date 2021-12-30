@@ -50,6 +50,13 @@
       <artifactId>webdrivermanager</artifactId>
       <version>${webdriver.manager.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/software.reinvent/headless-chrome -->
+<dependency>
+    <groupId>software.reinvent</groupId>
+    <artifactId>headless-chrome</artifactId>
+    <version>0.3.6</version>
+</dependency>
+
 
   </dependencies>
 
